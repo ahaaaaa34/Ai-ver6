@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<title>英単語学習サイト</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+body{font-family:Arial,Helvetica,sans-serif;margin:20px;}
+textarea,input{width:100%;box-sizing:border-box;font-size:16px;padding:8px;margin:8px 0;}
+button{padding:8px 12px;margin:4px;font-size:16px;cursor:pointer;}
+button.active{opacity:0.5;}
+.hide{display:none;}
+#prompt{font-size:24px;font-weight:bold;margin:16px 0 0;}
+#playAudio{font-size:24px;background:none;border:none;cursor:pointer;vertical-align:middle;}
+#resultArea{margin-top:16px;font-size:18px;}
+#quizArea{margin-top:20px;}
+</style>
+</head>
+<body>
+<!--── セットアップ ──-->
+<div id="setupArea">
+  <h2>語彙を入力（単語↵日本語↵英文↵訳文…↵↵で区切り）</h2>
+  <textarea id="vocabInput" rows="10" placeholder="Hello
+こんにちは
+Hello! How are you today?
+こんにちは！今日はどうですか？
+Hello, my name is Tom.
+こんにちは、私の名前はトムです。
+
+Apple
+りんご
+This is an apple.
+これはりんごです。
+I like eating apples.
+私はりんごを食べるのが好きです。"></textarea>
+  <div>
+    <button id="modeEnJa">英語から日本語</button>
+    <button id="modeJaEn">日本語から英語</button>
+  </div>
+</div>
+
+<!--── クイズ ──-->
+<div id="quizArea" class="hide">
+  <p id="prompt"></p><button id="playAudio" title="もう一度聞く">🔊</button>
+  <input id="answerInput" placeholder="ここに回答を入力してEnter">
+  <div id="resultArea"></div>
+  <button id="skipBtn">打ち直しなし</button>
+  <button id="backBtn">入力欄に戻る</button>
+</div>
+
+<script>
+/* JavaScriptは省略。Canvasの最新版が使用されます */
+</script>
+</body>
+</html>
